@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    = favicon_link_tag 'favicon.png'
+    %title Katello-Scholar
+    = stylesheet_link_tag "katello-scholar_login"
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "bootstrap-responsive"
+    / = javascript_include_tag :all
+    = javascript_include_tag "jquery-1.8.3"
+    = javascript_include_tag "bootstrap"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+
+  %body
+     
+    =yield
+
+    %footer.modal-footer.navbar.navbar-fixed-bottom
+      %center
+        %span.muted.credit Katello-Scholar powered by
+        = link_to "http://www.katello.org/", "http://www.katello.org/"
+    / = yield :javascripts_block
+    / = yield :extra

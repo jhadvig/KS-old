@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    = favicon_link_tag 'favicon.png'
+    %title Katello-Scholar
+    = stylesheet_link_tag "katello-scholar"
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "bootstrap-responsive"
+    / = javascript_include_tag :all
+    = javascript_include_tag "jquery-1.8.3"
+    = javascript_include_tag "bootstrap"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+
+  %body
+
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          = link_to dashboard_path, :class=>"brand" do
+            = image_tag "katello-scholar-icon-white.png"
+            Katello-Scholar
+
+          %ul.nav.header
+
+            %li{:class=> ("active" if params[:controller] == 'dashboard')}
+              = link_to "Dashboard", dashboard_path
+            %li{:class=> ("active" if params[:controller] == 'courses')}
+              = link_to "Courses", courses_path
+            %li{:class=> ("active" if params[:controller] == 'templates')}
+              = link_to "Templates", templates_path
+            %li{:class=> ("active" if params[:controller] == 'systems')}
+              = link_to "Systems", systems_path
+
+            / = content_tag (:li) do
+            /   = button_to "Dashboard", dashboard_path, :method => :get, :class => "btn btn-inverse"
+            / = content_tag (:li) do
+            /   = button_to "Courses", courses_path, :method => :get, :class => "btn btn-inverse"
+            / = content_tag (:li) do
+            /   = button_to "Templates", templates_path, :method => :get, :class => "btn btn-inverse"
+            / = content_tag (:li) do
+            /   = button_to "Systems", systems_path, :method => :get, :class => "btn btn-inverse"
+
+
+
+
+          .btn-group.pull-right
+            %a.btn.btn-primary.dropdown-toggle{"data-toggle"=>"dropdown", :href =>"#{}"}
+              Username
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href=>root_path} Log Out
+              %li
+                %a{:href=>"#"} Settings
+
+
+          
+
+
+    .container
+      .row
+        .span14
+          .well.well-large
+
+            = yield 
+
+    %footer.modal-footer.navbar.navbar-fixed-bottom
+      %center
+        %span.muted.credit Katello-Scholar powered by
+        = link_to "http://www.katello.org/", "http://www.katello.org/"
+    / = yield :javascripts_block
+    / = yield :extra

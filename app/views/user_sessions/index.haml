@@ -1,0 +1,8 @@
+.container
+	= form_tag (dashboard_path, :class => "form-signin") do
+		%h2.form-signin-heading Sign in
+		%input.input-block-level{ :text => "text", :placeholder => " Login"}
+		%input.input-block-level{ :text => "password", :placeholder => " Password"}
+		%label.checkbox
+			%input{:type =>"checkbox", :value=>"Remember me"} Remember me
+		= submit_tag "Log in"

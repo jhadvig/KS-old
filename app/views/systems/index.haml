@@ -1,0 +1,112 @@
+
+
+%ul.nav.nav-tabs.content_tabs	
+	%li 
+		%a{:href=>"#"} Action!
+	%li 
+		%a{:href=>"#"} Action?
+	%li 
+		%a{:href=>"#"} Action|
+
+	%li.dropdown
+		%a.dropdown-toggle{"data-toogle" => "dropdown", :href => "#"} 
+			Dropdown
+			%b.caret
+		%ul.dropdown-menu
+			%li 
+				%a{:href=>"#"} home
+			%li 
+				%a{:href=>"#"} home
+	
+.container
+	.row.first
+		.span4
+			%h2.section
+				= params[:controller].capitalize
+			.table_info
+				%span.muted.count
+					= ('Viewing 0 of 0 results (0 Total Systems)')
+				= link_to "+ New System", systems_path, :class => "new_path"	
+		
+.container
+	.row.second
+		.span4
+			.well.sidebar-nav.scrolling-nav
+				%table.table.table-striped.list
+					%thead
+						%tr
+							%th.name Name
+							%th.date Registered / Modified
+					%tbody
+						%tr
+							%td.name system1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system2
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr.error
+							%td.name system3
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system4
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr.success
+							%td.name system5
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system6
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system7
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system8
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr.success
+							%td.name system5
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system6
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system7
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name system8
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+
+					
+
+
+		.span8
+			.hero-unit
+				%hi 
+				%p This is a template for a simple marketing or informational website.
+				%p
+					%a.btn.btn-primary.btn-large Learn more
+
+			

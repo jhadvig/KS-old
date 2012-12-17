@@ -1,0 +1,49 @@
+body{
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #008080), color-stop(1, #63EAFF));
+}
+
+.table_info {
+	padding-bottom: 5px;
+	a.new_path {
+	  padding-left: 3px;
+	}
+}
+
+table.list {
+	width: 354px !important;
+	position: relative;
+	right: 20px;
+	top: -20px;
+
+	th.name {
+
+	}
+	th.date {
+
+	}
+
+	tr {
+		cursor: pointer;
+		td.name{
+			width: 170px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		td.date {
+			font-size: 10px;
+		}
+
+	}
+}
+
+.well.scrolling-nav{
+	height: 500px;
+	overflow: auto;
+}
+
+.nav.nav-tabs.content_tabs > li {
+	margin-left: 60px;
+}
+
+

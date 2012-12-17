@@ -6,6 +6,7 @@ gem 'rails', '3.0.10'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '= 0.2.18'
+#gem 'sqlite3'
 
 
 # Stuff for view/display/frontend
@@ -14,6 +15,10 @@ gem 'haml-rails'
 gem 'compass', '>= 0.11.5', '< 0.12'
 gem 'compass-960-plugin', '>= 0.10.4'
 gem 'simple-navigation', '>= 3.3.4'
+
+# Stuff for i18n
+gem 'gettext_i18n_rails'
+gem 'i18n_data', '>= 0.2.6', :require => 'i18n_data'
 
 # Use unicorn as the web server
 # gem 'unicorn'

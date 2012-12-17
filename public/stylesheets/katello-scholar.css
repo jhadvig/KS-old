@@ -1,0 +1,46 @@
+/* line 1, sass/katello-scholar.scss */
+body {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, teal), color-stop(1, #63eaff));
+}
+
+/* line 5, sass/katello-scholar.scss */
+.table_info {
+  padding-bottom: 5px;
+}
+/* line 7, sass/katello-scholar.scss */
+.table_info a.new_path {
+  padding-left: 3px;
+}
+
+/* line 12, sass/katello-scholar.scss */
+table.list {
+  width: 354px !important;
+  position: relative;
+  right: 20px;
+  top: -20px;
+}
+/* line 25, sass/katello-scholar.scss */
+table.list tr {
+  cursor: pointer;
+}
+/* line 27, sass/katello-scholar.scss */
+table.list tr td.name {
+  width: 170px;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 33, sass/katello-scholar.scss */
+table.list tr td.date {
+  font-size: 10px;
+}
+
+/* line 40, sass/katello-scholar.scss */
+.well.scrolling-nav {
+  height: 500px;
+  overflow: auto;
+}
+
+/* line 45, sass/katello-scholar.scss */
+.nav.nav-tabs.content_tabs > li {
+  margin-left: 60px;
+}

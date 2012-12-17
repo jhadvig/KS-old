@@ -1,0 +1,92 @@
+
+
+%ul.nav.nav-tabs.content_tabs	
+	%li 
+		%a{:href=>"#"} Action!
+	%li 
+		%a{:href=>"#"} Action?
+	%li 
+		%a{:href=>"#"} Action|
+
+	%li.dropdown
+		%a.dropdown-toggle{"data-toogle" => "dropdown", :href => "#"} 
+			Dropdown
+			%b.caret
+		%ul.dropdown-menu
+			%li 
+				%a{:href=>"#"} home
+			%li 
+				%a{:href=>"#"} home
+	
+.container
+	.row.first
+		.span4
+			%h2.section
+				= params[:controller].capitalize
+			.table_info
+				%span.muted.count
+					= ('Viewing 0 of 0 results (0 Total Templates)')
+				= link_to "+ New Template", templates_path, :class => "new_path"	
+		
+.container
+	.row.second
+		.span4
+			.well.sidebar-nav.scrolling-nav
+				%table.table.table-striped.list
+					%thead
+						%tr
+							%th Name
+							%th Registered / Modified
+					%tbody
+						%tr
+							%td.name Template1
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name Template2
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr.error
+							%td.name Template3
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name Template4
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr.success
+							%td.name Template5
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name Template6
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name Template7
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+						%tr
+							%td.name Template8
+							%td.date 
+								.created_at 06 Oct 2012, 14:53:26, +0200
+								.modified_at 06 Oct 2012, 14:53:26, +0200
+
+					
+
+
+		.span8
+			.hero-unit
+				%hi 
+				%p This is a template for a simple marketing or informational website.
+				%p
+					%a.btn.btn-primary.btn-large Learn more
+
+			
