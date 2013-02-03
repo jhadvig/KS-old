@@ -25,8 +25,8 @@
 				= params[:controller].capitalize
 			.table_info
 				%span.muted.count
-					= ('Viewing 0 of 0 results (0 Total Templates)')
-				= link_to "+ New Template", templates_path, :class => "new_path"	
+					= _('Viewing 0 of 0 results (0 Total Templates)')
+				= link_to _('+ New Template'), templates_path, :class => "new_path"	
 		
 .container
 	.row.second

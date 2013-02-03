@@ -25,13 +25,13 @@
           %ul.nav.header
 
             %li{:class=> ("active" if params[:controller] == 'dashboard')}
-              = link_to "Dashboard", dashboard_path
+              = link_to _("Dashboard"), dashboard_path
             %li{:class=> ("active" if params[:controller] == 'courses')}
-              = link_to "Courses", courses_path
+              = link_to _("Courses"), courses_path
             %li{:class=> ("active" if params[:controller] == 'templates')}
-              = link_to "Templates", templates_path
+              = link_to _("Templates"), templates_path
             %li{:class=> ("active" if params[:controller] == 'systems')}
-              = link_to "Systems", systems_path
+              = link_to _("Systems"), systems_path
 
             / = content_tag (:li) do
             /   = button_to "Dashboard", dashboard_path, :method => :get, :class => "btn btn-inverse"
@@ -51,7 +51,7 @@
               %span.caret
             %ul.dropdown-menu
               %li
-                %a{:href=>root_path} Log Out
+                %a{:href=>root_path} #{_('Log Out')}
               %li
                 %a{:href=>"#"} Settings
 
@@ -68,7 +68,7 @@
 
     %footer.modal-footer.navbar.navbar-fixed-bottom
       %center
-        %span.muted.credit Katello-Scholar powered by
+        %span.muted.credit #{_('Katello-Scholar powered by')}
         = link_to "http://www.katello.org/", "http://www.katello.org/"
     / = yield :javascripts_block
     / = yield :extra

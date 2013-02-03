@@ -4,7 +4,6 @@ class UserSessionsController < ApplicationController
 
 	def new
 
-
 		redirect_to dashboard_path
 	end
 

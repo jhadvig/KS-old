@@ -22,11 +22,11 @@
 	.row.first
 		.span4
 			%h2.section
-				= params[:controller].capitalize
+				= _(params[:controller].capitalize)
 			.table_info
 				%span.muted.count
-					= ('Viewing 0 of 0 results (0 Total Courses)')
-				= link_to "+ New Course", courses_path, :class => "new_path"
+					= _('Viewing 0 of 0 results (0 Total Courses)')
+				= link_to _("+ New Course"), courses_path, :class => "new_path"
 
 		
 .container
@@ -36,8 +36,8 @@
 				%table.table.table-striped.list
 					%thead
 						%tr
-							%th.name Name
-							%th.date Registered / Modified
+							%th.name #{_('Name')}
+							%th.date #{_('Registered / Modified')}
 					%tbody
 						%tr
 							%td.name course1
@@ -108,6 +108,6 @@
 				%hi 
 				%p This is a template for a simple marketing or informational website.
 				%p
-					%a.btn.btn-primary.btn-large Learn more
+					%a.btn.btn-primary.btn-large #{_('Learn more')}
 
 			

@@ -42,3 +42,7 @@ module KatelloScholar
     config.filter_parameters += [:password]
   end
 end
+
+FastGettext.add_text_domain 'app', :path => 'locale', :type => :po #, :ignore_fuzzy => true, :report_warning => false, :ignore_obsolete => true
+FastGettext.default_available_locales = ['en','de']
+FastGettext.default_text_domain = 'app'
