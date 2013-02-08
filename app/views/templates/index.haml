@@ -23,61 +23,98 @@
 		.span4
 			%h2.section
 				= params[:controller].capitalize
+
 			.table_info
 				%span.muted.count
 					= _('Viewing 0 of 0 results (0 Total Templates)')
-				= link_to _('+ New Template'), templates_path, :class => "new_path"	
-		
-.container
+					-#= button_to	_('+ 1'), templates_path, :class => "btn btn-info temnew_path"
+					%button.btn.btn-info.template-new-path + 1
 	.row.second
 		.span4
 			.well.sidebar-nav.scrolling-nav
 				%table.table.table-striped.list
 					%thead
 						%tr
-							%th Name
-							%th Registered / Modified
+							%th.name #{_('Name')}
+							%th.date #{_('Registered / Modified')}
 					%tbody
-						%tr
-							%td.name Template1
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name Template2
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr.error
-							%td.name Template3
+						%tr.success
+							%td.name 
+								%i.icon-ok 
+								course1
 							%td.date
 								.created_at 06 Oct 2012, 14:53:26, +0200
 								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name Template4
-							%td.date 
+						%tr.success
+							%td.name 
+								%i.icon-ok 
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.success
+							%td.name 
+								%i.icon-ok 
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.success
+							%td.name 
+								%i.icon-ok 
+								course1
+							%td.date
 								.created_at 06 Oct 2012, 14:53:26, +0200
 								.modified_at 06 Oct 2012, 14:53:26, +0200
 						%tr.success
-							%td.name Template5
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name Template6
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name Template7
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name Template8
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
+							%td.name 
+								%i.icon-ok 
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
+						%tr.error
+							%td.name 
+								%i.icon-remove
+								course1
+							%td.date
+								.created_at 06 Oct 2012, 14:53:26
+								.modified_at 06 Oct 2012, 14:53:26
 
 					
 

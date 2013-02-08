@@ -1,8 +1,13 @@
 .container
-	= form_tag (dashboard_path, :class => "form-signin") do
-		%h2.form-signin-heading Sign in
-		%input.input-block-level{ :text => "text", :placeholder => " Login"}
-		%input.input-block-level{ :text => "password", :placeholder => " Password"}
-		%label.checkbox
-			%input{:type =>"checkbox", :value=>"Remember me"} Remember me
-		= submit_tag "Log in"
+
+	.container.login
+		= form_tag (dashboard_path, :class => "form-signin", :method=>:post) do
+			%h1.form-signin-heading Sign in
+			%input#inputEmail{:placeholder => _("Email address"), :type => "text"}
+			%input#inputPassword{:placeholder => _("Password"), :type => "password"}
+			%label.checkbox
+				%input{:type =>"checkbox", :value=>"_(Remember me)"} #{_('Remember me')}
+			= image_tag "katello_icon_big.png", :class=>"katello_icon_big"
+			= submit_tag _("Login"), :class => "btn btn-primary btn-large"
+
+

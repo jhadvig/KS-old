@@ -1,5 +1,17 @@
 body{
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #005C5C), color-stop(1, #63EAFF));
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #005C5C), color-stop(1, #19C3E6));
+}
+
+.header {
+	margin-left: 20px !important;
+	li{
+		a{
+		}
+	}
+}
+
+.table_info .button_to {
+	display: inline-block;
 }
 
 .table_info {
@@ -9,8 +21,8 @@ body{
 	}
 }
 
-table.list {
-	width: 354px !important;
+table.list{
+	width: 370px !important;
 	position: relative;
 	right: 20px;
 	top: -20px;
@@ -25,25 +37,116 @@ table.list {
 	tr {
 		cursor: pointer;
 		td.name{
-			width: 170px;
+			width: 180px;
+			max-width: 180px;
 			font-size: 12px;
 			font-weight: bold;
+			word-wrap:break-word;
+			line-height: 15px;
 		}
 
 		td.date {
+			width: 180px;
 			font-size: 10px;
+			line-height: 15px;
+		}
+		td.hover{
+			background-color: #C5CAD9 !important;
 		}
 
 	}
+
 }
+
 
 .well.scrolling-nav{
 	height: 500px;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 .nav.nav-tabs.content_tabs > li {
 	margin-left: 60px;
 }
+
+.navbar-fixed-top {
+	a.user-button{
+		margin-left: 10px;
+		padding: 6px 16px;
+		border: 1px solid black;
+	}
+	a.user-button:active{
+	}
+	.pull-right.settings{
+		ul.dropdown-menu {
+			background-color: #2f96b4;
+			li a {
+				color: white;
+			}
+
+		}
+	}
+	.pull-right.notification{
+		a {
+			margin-right: 15px;
+			margin-top: 7px;
+			border: 1px solid black;
+		}
+	}
+}
+
+table.courses{
+    table-layout: fixed;
+    width: 100%;
+    text-align:left;
+    thead{
+    	color:#005C5C;
+    }
+    tbody{
+
+    }
+	th.checkbox, td.checkbox {
+    	overflow: hidden;
+    	width:18px;
+    	padding-left: 6px;
+		padding-top: 4px;
+    }
+    th.action, td.action {
+    	width: 72px;
+    }
+    td {
+    	margin-left:3px;
+    }
+
+}
+.table-action-button {
+	button.btn-small.edit {
+		z-index: 1010;
+	}
+	button.dropdown-toogle {
+		border-radius: 5px;
+		margin-left: -4px !important;
+		z-index: 1005;
+	}
+	
+}
+
+
+.table-action-button {
+	ul.dropdown-menu {
+		.delete {
+			color:red;
+		}
+		.delete:hover{
+				
+			color:red;
+			font-weight:bold;
+		}
+	}
+}
+
+ul.dropdown-menu > li > a:hover {background-color:red;}
+
+
 
 

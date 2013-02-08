@@ -6,12 +6,12 @@ class DashboardController < ApplicationController
 	# 	puts "KKAAAREEEE"
 	#   	I18n.locale = kare
 	# end
-
+	layout 'katello-scholar'
 	def new
 		if false
 			 
 		else
-			render "common/user_session", :layout => "converge-ui/_login_layout"
+			#render "common/user_session", :layout => "converge-ui/_login_layout"
 		end
 	end
 

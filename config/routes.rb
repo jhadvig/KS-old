@@ -58,7 +58,9 @@ KatelloScholar::Application.routes.draw do
 
   match 'dashboard' => 'dashboard#index', :as => :dashboard
 
-  match '/login' => 'user_sessions#new'
+  match 'login' => 'user_sessions#new'
+
+  match '/katello-scholar' => 'user_sessions#index'
 
   # See how all your routes lay out with "rake routes"
 

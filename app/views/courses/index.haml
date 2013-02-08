@@ -1,113 +1,46 @@
 
+%h2.section
+	= _(params[:controller].capitalize)
+%ul.nav.nav-tabs
+.table_info
+	%span.muted.count
+		= _('Viewing 0 of 0 results (0 Total Courses)')
+		-#%button.btn.btn-info.template-new-path + 1
+		= button_to "+ New", courses_path, :class=>"btn btn-info courses-new-path"
 
-%ul.nav.nav-tabs.content_tabs	
-	%li 
-		%a{:href=>"#"} Action!
-	%li 
-		%a{:href=>"#"} Action?
-	%li 
-		%a{:href=>"#"} Action|
+.courses-table
 
-	%li.dropdown
-		%a.dropdown-toggle{"data-toogle" => "dropdown", :href => "#"} 
-			Dropdown
-			%b.caret
-		%ul.dropdown-menu
-			%li 
-				%a{:href=>"#"} home
-			%li 
-				%a{:href=>"#"} home
-	
-.container
-	.row.first
-		.span4
-			%h2.section
-				= _(params[:controller].capitalize)
-			.table_info
-				%span.muted.count
-					= _('Viewing 0 of 0 results (0 Total Courses)')
-				= link_to _("+ New Course"), courses_path, :class => "new_path"
+	%table.table-striped.table-bordered.table-hover.table-bordered.courses
+		%thead
+			%tr
+				%th.checkbox.check_all
+					%label.checkbox
+						%input{:type =>"checkbox", :value=>0}
 
-		
-.container
-	.row.second
-		.span4
-			.well.sidebar-nav.scrolling-nav
-				%table.table.table-striped.list
-					%thead
-						%tr
-							%th.name #{_('Name')}
-							%th.date #{_('Registered / Modified')}
-					%tbody
-						%tr
-							%td.name course1
-							%td.date
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course2
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr.success
-							%td.name course3
-							%td.date
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course4
-							%td.date
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr.success
-							%td.name course5
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course6
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course7
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course8
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr.success
-							%td.name course5
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course6
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course7
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
-						%tr
-							%td.name course8
-							%td.date 
-								.created_at 06 Oct 2012, 14:53:26, +0200
-								.modified_at 06 Oct 2012, 14:53:26, +0200
+				%th.course_name #{_('Course Name')}
+				%th.time #{_('Time')}
+				%th.operation_system #{_('Operating System')}
+				%th.lab #{_('Lab')}
+				%th.last_report #{_('Last Report')}
+				%th.action #{_('Action')}
+		%tbody
+			%tr
+				%td.checkbox
+					%label.checkbox
+						%input{:type =>"checkbox", :value=>0}
+				%td.course_name #{_('Course Name')}
+				%td.operation_system #{_('Time')}
+				%td.environment #{_('Operating System')}
+				%td.lab #{_('Lab')}
+				%td.last_report #{_('Last Report')}
+				%td.action 
+					.btn-group.table-action-button
+						%button.btn.btn-small.edit Edit
+						%button.btn.btn-small.dropdown-toogle{"data-toggle"=>"dropdown", :href =>"#{}"}
+							%span.caret
+						%ul.dropdown-menu
+							%li 
+								%a{:href=>"#"} #{_('Clone')}
+							%li 
+								%a.delete{:href=>"#"} #{_('Delete')}
 
-					
-
-
-		.span8
-			.hero-unit
-				%hi 
-				%p This is a template for a simple marketing or informational website.
-				%p
-					%a.btn.btn-primary.btn-large #{_('Learn more')}
-
-			

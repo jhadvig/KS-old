@@ -17,7 +17,7 @@
 
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
-        .container-fluid
+        .container-fluid.header-container
           = link_to dashboard_path, :class=>"brand" do
             = image_tag "katello-scholar-icon-white.png"
             Katello-Scholar
@@ -33,27 +33,23 @@
             %li{:class=> ("active" if params[:controller] == 'systems')}
               = link_to _("Systems"), systems_path
 
-            / = content_tag (:li) do
-            /   = button_to "Dashboard", dashboard_path, :method => :get, :class => "btn btn-inverse"
-            / = content_tag (:li) do
-            /   = button_to "Courses", courses_path, :method => :get, :class => "btn btn-inverse"
-            / = content_tag (:li) do
-            /   = button_to "Templates", templates_path, :method => :get, :class => "btn btn-inverse"
-            / = content_tag (:li) do
-            /   = button_to "Systems", systems_path, :method => :get, :class => "btn btn-inverse"
 
-
-
-
-          .btn-group.pull-right
-            %a.btn.btn-primary.dropdown-toggle{"data-toggle"=>"dropdown", :href =>"#{}"}
+          .btn-group.pull-right.settings
+            %a.btn.btn-primary.dropdown-toggle.user-button{"data-toggle"=>"dropdown", :href =>"#{}"}
               Username
               %span.caret
             %ul.dropdown-menu
               %li
-                %a{:href=>root_path} #{_('Log Out')}
-              %li
                 %a{:href=>"#"} Settings
+              %li
+                %a{:href=>root_path} #{_('Log Out')}
+
+          .btn-group.pull-right.notification
+            =link_to dashboard_path, :class=>"badge badge-info" do
+              128
+              
+              
+
 
 
           
@@ -61,7 +57,7 @@
 
     .container
       .row
-        .span14
+        .span12
           .well.well-large
 
             = yield 

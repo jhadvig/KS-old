@@ -13,6 +13,10 @@ $(window).ready(function(){
 
 function KS_Init() {
 
+	$('table.table-striped tbody tr').hover(function(){
+		$(this).find('td').toggleClass('hover')
+	});
+
 	$('.dropdown-toggle').dropdown();
 	
 
